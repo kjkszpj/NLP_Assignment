@@ -26,11 +26,7 @@ print('------ex2------')
 stopw = nltk.corpus.stopwords.words('english')
 bg = [(a, b) for (a, b) in nltk.bigrams(emma) if a.isalpha() and b.isalpha() and a not in stopw and b not in stopw]
 freq_bg = nltk.FreqDist(bg)
-#	??
-ans2 = [(-freq_bg[i], i) for i in freq_bg.keys()]
-ans2 = sorted(ans2)
-ans2 = [(b, -a) for (a, b) in ans2[:50]]
-print(ans2)
+print([i for i in freq_bg.most_common(50)])
 
 #	optional
 print('------ex3------')
