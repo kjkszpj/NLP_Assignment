@@ -9,12 +9,13 @@
 ######
 
 #	第二题
+#	假设单词不包含空格
 content = open('a.in').readlines()
 result0 = []
 for s in content:
 	a, b = s.split(' ')
 	if b[-1] == '\n': b = b[:-1]
-	result0.append([a, b])
+	result0.append([a, int(b)])
 print(result0)
 
 #	第三题
